@@ -4,37 +4,190 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --text-main: #c9d1d9;
+            --text-heading: #f0f6fc;
+            --accent-color: #f0b90b;
+            --border-color: #30363d;
+            --muted: #8b949e;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 24px;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 40px auto;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 40px;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 28px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 22px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            margin-bottom: 12px;
+        }
+
+        .logo-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            border: 2px solid var(--accent-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            background: rgba(240, 185, 11, 0.08);
+        }
+
+        h1 {
+            color: var(--text-heading);
+            font-size: clamp(2rem, 3vw, 2.7rem);
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: var(--accent-color);
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        main {
+            display: block;
+        }
+
+        h2 {
+            color: var(--text-heading);
+            font-size: 1.35rem;
+            margin: 26px 0 10px;
+        }
+
+        p,
+        ul {
+            margin-bottom: 16px;
+            font-size: 1rem;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.85rem;
+            color: var(--muted);
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 14px;
+            }
+
+            .container {
+                padding: 24px 18px;
+                margin: 20px auto;
+            }
+
+            .logo-area {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
-    WorldWise
-Privacy Policy
+    <div class="container">
+        <header class="header">
+            <div class="logo-area">
+                <div class="logo-icon" aria-label="WorldWise logo">🌍</div>
+                <div>
+                    <h1>WorldWise</h1>
+                    <p class="subtitle">Privacy Policy</p>
+                </div>
+            </div>
+            <p class="last-updated">Last updated: October 01, 2026</p>
+        </header>
 
-Last updated: October 01, 2026
+        <main>
+            <p>Welcome to WorldWise (&ldquo;Know the World&rdquo;). We respect your privacy and are committed to protecting any information you may share while using our mobile application.</p>
 
-Welcome to WorldWise ("Know the World"). We respect your privacy and are committed to protecting any information you may share while using our mobile application.
+            <section>
+                <h2>1. Information We Collect</h2>
+                <p>WorldWise is designed with your privacy in mind. We do not require you to create an account, register, or log in to use the app. As a result:</p>
+                <ul>
+                    <li>We do not collect personally identifiable information (PII) such as your name, email address, phone number, or precise location.</li>
+                    <li>The app operates locally on your device to cache data, track your quiz scores, and record seen countries/territories.</li>
+                </ul>
+            </section>
 
-1. Information We Collect
-WorldWise is designed with your privacy in mind. We do not require you to create an account, register, or log in to use the app. As a result:
+            <section>
+                <h2>2. Permissions &amp; Device Data</h2>
+                <p>Our app may request standard device permissions strictly necessary for optimal performance and rendering (such as network access to load map layouts or geographical databases). We do not track, store, or sell your device identifiers or usage logs.</p>
+            </section>
 
-We do not collect personally identifiable information (PII) such as your name, email address, phone number, or precise location.
+            <section>
+                <h2>3. Third-Party Services</h2>
+                <p>WorldWise may utilize standard app store analytics or distribution platforms (such as Google Play Services) which may automatically collect non-personal diagnostic data, crash reports, and installation statistics as governed by their respective privacy policies.</p>
+            </section>
 
-The app operates locally on your device to cache data, track your quiz scores, and record seen countries/territories.
+            <section>
+                <h2>4. Children&rsquo;s Privacy</h2>
+                <p>WorldWise is safe for users of all ages. Because we do not knowingly collect personal information from children under 13, parents and guardians can feel secure letting children explore the globe through our app.</p>
+            </section>
 
-2. Permissions & Device Data
-Our app may request standard device permissions strictly necessary for optimal performance and rendering (such as network access to load map layouts or geographical databases). We do not track, store, or sell your device identifiers or usage logs.
+            <section>
+                <h2>5. Changes to This Privacy Policy</h2>
+                <p>We may update our Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date. You are advised to review this policy periodically for any updates.</p>
+            </section>
 
-3. Third-Party Services
-WorldWise may utilize standard app store analytics or distribution platforms (such as Google Play Services) which may automatically collect non-personal diagnostic data, crash reports, and installation statistics as governed by their respective privacy policies.
+            <section>
+                <h2>6. Contact Us</h2>
+                <p>If you have any questions or suggestions about our Privacy Policy, please feel free to reach out via our developer contact channels.</p>
+            </section>
+        </main>
 
-4. Children’s Privacy
-WorldWise is safe for users of all ages. Because we do not knowingly collect personal information from children under 13, parents and guardians can feel secure letting children explore the globe through our app.
-
-5. Changes to This Privacy Policy
-We may update our Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date. You are advised to review this policy periodically for any updates.
-
-6. Contact Us
-If you have any questions or suggestions about our Privacy Policy, please feel free to reach out via our developer contact channels.
-
-© 2026 WorldWise. All rights reserved.
+        <footer class="footer">
+            © 2026 WorldWise. All rights reserved.
+        </footer>
+    </div>
 </body>
 </html>
